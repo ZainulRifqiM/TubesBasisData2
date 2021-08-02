@@ -1,5 +1,9 @@
 <?php
-//  include_once("functions.php"); 
+session_start();
+if (isset($_SESSION["login"])) {
+	header("Location: index.php");
+	exit; 
+}
  
 require 'functions.php';
 if (isset($_POST["login"])) {
@@ -58,7 +62,7 @@ if (isset($_POST["login"])) {
                   <h1 class="font-weight-bold ">To Your Account</h1>
                 </div>
                 
-                <form action="" method="POST" name="f" class="mt-5 mb-5">
+                <form action="" method="POST"class="mt-5 mb-5">
                   <div class="form-group">
                     <!-- <label for="username" class="form-label fw-bolder">Username</label> -->
                     <input name="username" class="form-control form-login" placeholder="username" required autofocus />
