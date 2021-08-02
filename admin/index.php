@@ -1,9 +1,9 @@
 <?php
-// session_start();
-// if (!isset($_SESSION["login"])) {
-// 	header("Location: login.php");
-// 	exit; 
-// }
+session_start();
+if (!isset($_SESSION["login"])) {
+    header("Location: login.php");
+    exit;
+}
 ob_start();
 require "functions.php";
 
@@ -52,7 +52,7 @@ require "functions.php";
                 <ul class="nav">
                     <li>
                         <a href="index.php">
-                        <i class="fas fa-home text-light"></i>
+                            <i class="fas fa-home text-light"></i>
                             <!-- <i class="nc-icon nc-bank"></i> -->
                             <p>Dashboard</p>
                         </a>
@@ -60,35 +60,35 @@ require "functions.php";
 
                     <li>
                         <a href="index.php?halaman=table-kramik">
-                        <i class="fas fa-square text-light"></i>
+                            <i class="fas fa-square text-light"></i>
                             <!-- <i class="nc-icon nc-spaceship text-warning"></i> -->
                             <p>Keramik</p>
                         </a>
                     </li>
                     <li>
                         <a href="index.php?halaman=table-sales">
-                        <i class="fas fa-user-check text-light"></i>
+                            <i class="fas fa-user-check text-light"></i>
                             <!-- <i class="nc-icon nc-sun-fog-29 text-success"></i> -->
                             <p>Sales</p>
                         </a>
                     </li>
                     <li>
                         <a href="index.php?halaman=table-pembeli">
-                        <i class="fas fa-users text-light"></i>
+                            <i class="fas fa-users text-light"></i>
                             <!-- <i class="nc-icon nc-glasses-2 text-danger"></i> -->
                             <p>Pembeli</p>
                         </a>
                     </li>
                     <li>
                         <a href="index.php?halaman=table-transaksi">
-                        <i class="fas fa-people-arrows text-light"></i>
+                            <i class="fas fa-people-arrows text-light"></i>
                             <!-- <i class="nc-icon nc-glasses-2 text-danger"></i> -->
                             <p>Transaksi</p>
                         </a>
                     </li>
                     <li>
                         <a href="index.php?halaman=table-pembayaran">
-                        <i class="fas fa-credit-card text-light"></i>
+                            <i class="fas fa-credit-card text-light"></i>
                             <!-- <i class="nc-icon nc-glasses-2 text-danger"></i> -->
                             <p>Pembayaran</p>
                         </a>
@@ -96,7 +96,7 @@ require "functions.php";
 
                     <li>
                         <a href="index.php?halaman=backup">
-                        <i class="fas fa-credit-card text-light"></i>
+                            <i class="fas fa-credit-card text-light"></i>
                             <!-- <i class="nc-icon nc-glasses-2 text-danger"></i> -->
                             <p>Back-up Transaksi</p>
                         </a>
@@ -156,7 +156,7 @@ require "functions.php";
                         include 'table-transaksi.php';
                     } else if ($_GET['halaman'] == 'table-pembayaran') {
                         include 'table-pembayaran.php';
-                    }else if ($_GET['halaman'] == 'table-kramik-hapus') {
+                    } else if ($_GET['halaman'] == 'table-kramik-hapus') {
                         include 'table-kramik-hapus.php';
                     } else if ($_GET['halaman'] == 'table-sales-hapus') {
                         include 'table-sales-hapus.php';
