@@ -1,11 +1,12 @@
 <?php
-session_start();
-if (!isset($_SESSION["login"])) {
-	header("Location: login.php");
-	exit; 
-}
-
+// session_start();
+// if (!isset($_SESSION["login"])) {
+// 	header("Location: login.php");
+// 	exit; 
+// }
+ob_start();
 require "functions.php";
+
 
 ?>
 
@@ -93,6 +94,14 @@ require "functions.php";
                         </a>
                     </li>
 
+                    <li>
+                        <a href="index.php?halaman=backup">
+                        <i class="fas fa-credit-card text-light"></i>
+                            <!-- <i class="nc-icon nc-glasses-2 text-danger"></i> -->
+                            <p>Back-up</p>
+                        </a>
+                    </li>
+
 
                 </ul>
             </div>
@@ -177,6 +186,8 @@ require "functions.php";
                         include 'table-transaksi-tambah.php';
                     } else if ($_GET['halaman'] == 'table-pembayaran-tambah') {
                         include 'table-pembayaran-tambah.php';
+                    } else if ($_GET['halaman'] == 'backup') {
+                        include 'backup.php';
                     }
                 } else {
                     include 'dashboard.php';
@@ -222,3 +233,4 @@ require "functions.php";
 </body>
 
 </html>
+<?php ob_flush(); ?>

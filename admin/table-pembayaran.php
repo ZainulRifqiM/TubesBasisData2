@@ -5,7 +5,7 @@
 // 	exit; 
 // }
 
-require 'functions.php';
+
 $bayar = query("SELECT * FROM pembayaran,transaksi WHERE pembayaran.NoFaktur=transaksi.NoFaktur");
 
  ?>

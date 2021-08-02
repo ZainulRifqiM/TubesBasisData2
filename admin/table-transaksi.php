@@ -5,7 +5,7 @@
 // 	exit; 
 // }
 
-require 'functions.php';
+
 $transaksi = query("SELECT * 
 				    FROM transaksi,barang,sales,pembeli 
 					WHERE transaksi.IdSales=sales.IdSales

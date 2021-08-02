@@ -5,7 +5,7 @@
 // 	exit; 
 // }
 
-require 'functions.php';
+
 $sales = query("SELECT * FROM sales WHERE IsDeleted = 0");
 
  ?>

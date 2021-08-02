@@ -5,7 +5,7 @@
 // 	exit; 
 // }
 
-require 'functions.php';
+
 $kramik = query("SELECT * FROM barang WHERE IsDeleted=0 ");
 
 

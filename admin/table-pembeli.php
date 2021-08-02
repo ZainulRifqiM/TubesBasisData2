@@ -5,7 +5,7 @@
 // 	exit; 
 // }
 
-require 'functions.php';
+
 $pembeli = query("SELECT * FROM pembeli WHERE IsDeleted = 0");
 
 
