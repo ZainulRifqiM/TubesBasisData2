@@ -98,7 +98,7 @@ require "functions.php";
                         <a href="index.php?halaman=backup">
                         <i class="fas fa-credit-card text-light"></i>
                             <!-- <i class="nc-icon nc-glasses-2 text-danger"></i> -->
-                            <p>Back-up</p>
+                            <p>Back-up Transaksi</p>
                         </a>
                     </li>
 
