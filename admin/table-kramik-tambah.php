@@ -4,7 +4,7 @@
 // 	header("Location: login.php");
 // 	exit; 
 // }
-require 'functions.php';
+// require 'functions.php';
 
 // cek apakah tombol submit sudah ditekan atau belum
 if ( isset($_POST["tambah"])) {

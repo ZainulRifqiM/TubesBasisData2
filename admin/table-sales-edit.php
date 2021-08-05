@@ -1,7 +1,7 @@
 <?php 
 
 
-require 'functions.php';
+// require 'functions.php';
 
 // ambil data di URL
 $IdSales = $_GET["IdSales"];

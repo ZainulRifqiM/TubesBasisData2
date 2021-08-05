@@ -1,18 +1,18 @@
 <?php
 // Menghitung Total Pelanggan
-// $count_guru = "SELECT COUNT(*) AS total FROM t_guru";
-// $result_guru = $conn->query($count_guru);
-// $total_guru = mysqli_fetch_assoc($result_guru);
+$count_barang = "SELECT COUNT(*) AS total FROM barang";
+$result_barang = $conn->query($count_barang);
+$total_barang = mysqli_fetch_assoc($result_barang);
 
 // // Menghitung Total genre
-// $count_sarana = "SELECT COUNT(*) AS total FROM t_sarana";
-// $result_sarana = $conn->query($count_sarana);
-// $total_sarana = mysqli_fetch_assoc($result_sarana);
+$count_pembeli = "SELECT COUNT(*) AS total FROM pembeli";
+$result_pembeli = $conn->query($count_pembeli);
+$total_pembeli = mysqli_fetch_assoc($result_pembeli);
 
 // // Menghitung Total sutradara
-// $count_t_ekstrakurikuler = "SELECT COUNT(*) AS total FROM t_ekstrakurikuler";
-// $result_t_ekstrakurikuler = $conn->query($count_t_ekstrakurikuler);
-// $total_t_ekstrakurikuler = mysqli_fetch_assoc($result_t_ekstrakurikuler);
+$count_transaksi = "SELECT COUNT(*) AS total FROM transaksi";
+$result_transaksi = $conn->query($count_transaksi);
+$total_transaksi = mysqli_fetch_assoc($result_transaksi);
 ?>
 
 <h3 style="color: #66615B;">Dashboard Zahran Kramik</h3>
@@ -30,8 +30,8 @@
                         </div>
                         <div class="col-7 col-md-8">
                             <div class="numbers">
-                                <p class="card-category">Jumlah Sales</p>
-                                <p class="card-title">1
+                                <p class="card-category">Jumlah Barang</p>
+                                <p class="card-title"><?= $total_barang['total'] ?>
                                 <p>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                         <div class="col-7 col-md-8">
                             <div class="numbers">
                                 <p class="card-category">Jumlah Pembeli</p>
-                                <p class="card-title">1
+                                <p class="card-title"><?= $total_pembeli['total'] ?>
                                 <p>
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                         <div class="col-7 col-md-8">
                             <div class="numbers">
                                 <p class="card-category">Jumlah Transaksi</p>
-                                <p class="card-title">1
+                                <p class="card-title"><?= $total_transaksi['total'] ?>
                                 <p>
                             </div>
                         </div>

@@ -1,3 +1,11 @@
+<?php
+require 'admin/functions.php';
+$kramikLantai = query("SELECT * FROM barang WHERE kategori='Lantai 50x50' OR kategori='Lantai 40x40'");
+$kramikWc = query("SELECT * FROM barang WHERE kategori='Lantai WC'");
+$kramikDinding = query("SELECT * FROM barang WHERE kategori='Keramik Dinding'");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -52,24 +60,24 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="img/1701683.jpg" class="d-block w-100 corosal" alt="..." />
+            <img src="img/1.jpg" class="d-block w-100 corosal" alt="..." />
             <div class="carousel-caption d-none d-md-block">
-              <h5 class="display-4">Zahran Kramik</h5>
-              <p class="lead">Mahasiswa | Teknik Informatika</p>
+              <h5>Zahran Kramik</h5>
+              <p>Kab. Cianjur Kec. Cipanas Desa Cipanas Kp. Pasekon Gang SDN Cipanas 04 RT02 RW16</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="img/2.png" class="d-block w-100 corosal" alt="..." />
+            <img src="img/2.jpg" class="d-block w-100 corosal" alt="..." />
             <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
+              <h5>Zahran Kramik</h5>
+              <p>Kab. Cianjur Kec. Cipanas Desa Cipanas Kp. Pasekon Gang SDN Cipanas 04 RT02 RW16</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="img/3.png" class="d-block w-100 corosal" alt="..." />
+            <img src="img/3.jpg" class="d-block w-100 corosal" alt="..." />
             <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
+              <h5>Zahran Kramik</h5>
+              <p>Kab. Cianjur Kec. Cipanas Desa Cipanas Kp. Pasekon Gang SDN Cipanas 04 RT02 RW16</p>
             </div>
           </div>
         </div>
@@ -93,138 +101,47 @@
             <h2>Catalogue</h2>
           </div>
         </div>
-
+        
         <div class="row justify-content-center fs-5">
+        <?php foreach( $kramikLantai as $row ) : ?>
           <div class="col-md-3 p-3 ">
             <div class="border border-light katalog">
             <div class="">
-              <img src="img/a.jpg" alt="" class="card" style="width: 18rem;" style="width: 300px; height: 300px" />
+              <img src="assets/img/<?= $row["gambar"]; ?>"  class="card" style="width: 18rem;" style="width: 300px; height: 300px">
+              <!-- <img src="img/a.jpg" alt="" class="card" style="width: 18rem;" style="width: 300px; height: 300px" /> -->
             </div>
             <div class="card-body">
-              <h5 class="card-title">Kramik Lantai 40x40</h5>
-              <p class="font-ket2">Rp. 40.000.00,-</p>
+              <h5 class="card-title"><?= $row['NamaBarang']?></h5>
+              <p class="font-ket2">Rp. <?= $row['HargaSatuan']?></p>
             </div>
+            
           </div>
+          
           </div>
-
-          <div class="col-md-3 p-3 ">
-            <div class="border border-light katalog">
-            <div class="">
-              <img src="img/a.jpg" alt="" class="card" style="width: 18rem;" style="width: 300px; height: 300px" />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Kramik Lantai 40x40</h5>
-              <p class="font-ket2">Rp. 40.000.00,-</p>
-            </div>
-          </div>
-          </div>
-
-          <div class="col-md-3 p-3 ">
-            <div class="border border-light katalog">
-            <div class="">
-              <img src="img/a.jpg" alt="" class="card" style="width: 18rem;" style="width: 300px; height: 300px" />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Kramik Lantai 40x40</h5>
-              <p class="font-ket2">Rp. 40.000.00,-</p>
-            </div>
-          </div>
-          </div>
-
-          <div class="col-md-3 p-3 ">
-            <div class="border border-light katalog">
-            <div class="">
-              <img src="img/a.jpg" alt="" class="card" style="width: 18rem;" style="width: 300px; height: 300px" />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Kramik Lantai 40x40</h5>
-              <p class="font-ket2">Rp. 40.000.00,-</p>
-            </div>
-          </div>
-          </div>
+          <?php endforeach; ?>
 
       <div class="container mt-3">
       <div class="row mb-3">
         <div class="col">
-          <h4>Kramik Lantai</h4>
+          <h4>Kramik Lantai WC</h4>
         </div>
       </div>
 
       <div class="row justify-content-center fs-5 mb-5">
-
+      <?php foreach( $kramikWc as $wc ) : ?>
         <div class="col-md-2 p-2 ">
           <div class="border border-light katalog">
           <div class="">
-            <img src="img/2.png" alt="" class="card" style="width: 12rem;" />
+          <img src="assets/img/<?= $wc["gambar"]; ?>"  class="card" style="width: 12rem;">
+            <!-- <img src="img/2.png" alt="" class="card" style="width: 12rem;" /> -->
           </div>
           <div class="card-body">
-            <h6 class="card-title">Kramik Lantai 40x40</h6>
-            <p class="font-ket">Rp. 40.000.00,-</p>
+          <h6 class="card-title"><?= $wc['NamaBarang']?></h6>
+            <p class="font-ket">Rp. <?= $wc['HargaSatuan']?></p>
           </div>
         </div>
         </div>
-
-        <div class="col-md-2 p-2 ">
-          <div class="border border-light katalog">
-          <div class="">
-            <img src="img/2.png" alt="" class="card" style="width: 12rem;" />
-          </div>
-          <div class="card-body">
-            <h6 class="card-title">Kramik Lantai 40x40</h6>
-            <p class="font-ket">Rp. 40.000.00,-</p>
-          </div>
-        </div>
-        </div>
-
-        <div class="col-md-2 p-2 ">
-          <div class="border border-light katalog">
-          <div class="">
-            <img src="img/2.png" alt="" class="card" style="width: 12rem;" />
-          </div>
-          <div class="card-body">
-            <h6 class="card-title">Kramik Lantai 40x40</h6>
-            <p class="font-ket">Rp. 40.000.00,-</p>
-          </div>
-        </div>
-        </div>
-
-        <div class="col-md-2 p-2 ">
-          <div class="border border-light katalog">
-          <div class="">
-            <img src="img/2.png" alt="" class="card" style="width: 12rem;" />
-          </div>
-          <div class="card-body">
-            <h6 class="card-title">Kramik Lantai 40x40</h6>
-            <p class="font-ket">Rp. 40.000.00,-</p>
-          </div>
-        </div>
-        </div>
-
-        <div class="col-md-2 p-2 ">
-          <div class="border border-light katalog">
-          <div class="">
-            <img src="img/2.png" alt="" class="card" style="width: 12rem;" />
-          </div>
-          <div class="card-body">
-            <h6 class="card-title">Kramik Lantai 40x40</h6>
-            <p class="font-ket">Rp. 40.000.00,-</p>
-          </div>
-        </div>
-        </div>
-
-        <div class="col-md-2 p-2 ">
-          <div class="border border-light katalog">
-          <div class="">
-            <img src="img/2.png" alt="" class="card" style="width: 12rem;" />
-          </div>
-          <div class="card-body">
-            <h6 class="card-title">Kramik Lantai 40x40</h6>
-            <p class="font-ket">Rp. 40.000.00,-</p>
-          </div>
-        </div>
-        </div>
-
-        
+        <?php endforeach; ?>
       
         <div class="container mt-3">
         <div class="row mb-3">
@@ -234,77 +151,20 @@
         </div>
 
       <div class="row justify-content-center fs-5">
+      <?php foreach( $kramikDinding as $dinding ) : ?>
         <div class="col-md-2 p-2 ">
           <div class="border border-light katalog">
           <div class="">
-            <img src="img/2.png" alt="" class="card" style="width: 12rem;" />
+          <img src="assets/img/<?= $dinding["gambar"]; ?>"  class="card" style="width: 12rem;">
+            <!-- <img src="img/2.png" alt="" class="card" style="width: 12rem;" /> -->
           </div>
           <div class="card-body">
-            <h6 class="card-title">Kramik Lantai 40x40</h6>
-            <p class="font-ket">Rp. 40.000.00,-</p>
+          <h5 class="card-title"><?= $dinding['NamaBarang']?></h5>
+            <p class="font-ket">Rp. <?= $dinding['HargaSatuan']?></p>
           </div>
         </div>
         </div>
-
-        <div class="col-md-2 p-2 ">
-          <div class="border border-light katalog">
-          <div class="">
-            <img src="img/2.png" alt="" class="card" style="width: 12rem;" />
-          </div>
-          <div class="card-body">
-            <h6 class="card-title">Kramik Lantai 40x40</h6>
-            <p class="font-ket">Rp. 40.000.00,-</p>
-          </div>
-        </div>
-        </div>
-
-        <div class="col-md-2 p-2 ">
-          <div class="border border-light katalog">
-          <div class="">
-            <img src="img/2.png" alt="" class="card" style="width: 12rem;" />
-          </div>
-          <div class="card-body">
-            <h6 class="card-title">Kramik Lantai 40x40</h6>
-            <p class="font-ket">Rp. 40.000.00,-</p>
-          </div>
-        </div>
-        </div>
-
-        <div class="col-md-2 p-2 ">
-          <div class="border border-light katalog">
-          <div class="">
-            <img src="img/2.png" alt="" class="card" style="width: 12rem;" />
-          </div>
-          <div class="card-body">
-            <h6 class="card-title">Kramik Lantai 40x40</h6>
-            <p class="font-ket">Rp. 40.000.00,-</p>
-          </div>
-        </div>
-        </div>
-
-        <div class="col-md-2 p-2 ">
-          <div class="border border-light katalog">
-          <div class="">
-            <img src="img/2.png" alt="" class="card" style="width: 12rem;" />
-          </div>
-          <div class="card-body">
-            <h6 class="card-title">Kramik Lantai 40x40</h6>
-            <p class="font-ket">Rp. 40.000.00,-</p>
-          </div>
-        </div>
-        </div>
-
-        <div class="col-md-2 p-2 ">
-          <div class="border border-light katalog">
-          <div class="">
-            <img src="img/2.png" alt="" class="card" style="width: 12rem;" />
-          </div>
-          <div class="card-body">
-            <h6 class="card-title">Kramik Lantai 40x40</h6>
-            <p class="font-ket">Rp. 40.000.00,-</p>
-          </div>
-        </div>
-        </div>
+        <?php endforeach; ?>
 
         </div>
     </section>

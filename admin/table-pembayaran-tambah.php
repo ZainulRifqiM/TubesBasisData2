@@ -4,7 +4,7 @@
 // 	header("Location: login.php");
 // 	exit; 
 // }
-require 'functions.php';
+// require 'functions.php';
 
 
 // cek apakah tombol submit sudah ditekan atau belum
@@ -31,7 +31,7 @@ if ( isset($_POST["tambah"])) {
  ?>
 
 	<div class="container" style="">
-	<h1>Tambah data Pembayaran</h1>
+	<h3 style="color: #66615B;">Tambah data Pembayaran</h3>
 
 
 

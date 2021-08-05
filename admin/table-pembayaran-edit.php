@@ -4,7 +4,7 @@
 // 	header("Location: login.php");
 // 	exit; 
 // }
-require 'functions.php';
+// require 'functions.php';
 
 // ambil data di URL
 $IdPembayaran = $_GET["IdPembayaran"];

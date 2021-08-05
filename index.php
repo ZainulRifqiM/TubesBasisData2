@@ -32,7 +32,7 @@
       <div class="container-fluid">
         <span class="navbar-brand mb-0 h1 text-white">Zahran Cramics</span>
       </div>
-      <a href="/TubesBasisData2/admin/index.php" class="mt-2 me-3 position-absolute top-0 end-0 btn btn-success katalog">Admin</a>
+      <a href="admin/index.php" class="mt-2 me-3 position-absolute top-0 end-0 btn btn-success katalog" target="_blank">Admin</a>
     </nav>
   </section>
 
@@ -123,7 +123,7 @@
         <p class="heading1">Pilihan Yang kami berikan<br> sangat beragam</p>
         <p class="paragraf">Lebih dari 1000 pengrajin di berbagai negara<br> bergabung dengan kami</p>
         <div class="catalog">
-          <a href="catalog.php" class="btn btn-success katalog">Catalog</a>
+          <a href="catalog.php" class="btn btn-success katalog" target="_blank">Catalog</a>
         </div>
 
       </div>

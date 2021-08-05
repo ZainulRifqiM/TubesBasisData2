@@ -96,7 +96,7 @@ require "functions.php";
 
                     <li>
                         <a href="index.php?halaman=backup">
-                            <i class="fas fa-credit-card text-light"></i>
+                            <i class="fas fa-download text-light"></i>
                             <!-- <i class="nc-icon nc-glasses-2 text-danger"></i> -->
                             <p>Back-up Transaksi</p>
                         </a>
@@ -143,7 +143,7 @@ require "functions.php";
             </nav>
             <!-- End Navbar -->
 
-            <div class="content" style="height: 80vh;">
+            <div class="content">
                 <?php
                 if (isset($_GET['halaman'])) {
                     if ($_GET['halaman'] == 'table-kramik') {
@@ -195,19 +195,19 @@ require "functions.php";
                 ?>
             </div>
 
-            <footer class="footer footer-black  footer-white ">
+            <!-- <footer class="footer footer-black  footer-white ">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="credits ml-auto">
                             <span class="copyright">
                                 © <script>
                                     document.write(new Date().getFullYear())
-                                </script>, made with <i class="fa fa-heart heart text-danger"></i> by SOIF2-ManjaroTeam2021
+                                </script>, made with <i class="fa fa-heart heart text-danger"></i> by Basdat2IF2-Penjualan-2021
                             </span>
                         </div>
                     </div>
                 </div>
-            </footer>
+            </footer> -->
         </div>
     </div>
     <!--   Core JS Files   -->

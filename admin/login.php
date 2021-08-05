@@ -52,7 +52,7 @@ if (isset($_POST["login"])) {
       <div class="card login-card">
         <div class="row no-gutters">
           <div class="col-md-7">
-            <img src="../assets/img/kramik_login.png" alt="login" class="login-card-img" />
+            <img src="../image/lomari.png" alt="login" class="login-card-img" />
           </div>
           <div class="col-md-5">
             <div class="card-body">

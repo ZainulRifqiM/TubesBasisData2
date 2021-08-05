@@ -11,7 +11,7 @@ $kramik = query("SELECT * FROM barang WHERE IsDeleted=0 ");
 
  ?>
 
-<div class="container">
+<div class="container ">
 
 
 <div class="row mb-3">
@@ -23,8 +23,9 @@ $kramik = query("SELECT * FROM barang WHERE IsDeleted=0 ");
     </div>
 </div>
 
-<div class="card-body">
-                <div class="table-responsive">
+
+<div class="card-body ">
+                <div class="table-responsive ">
                     <table class="table">
                         <thead class=" text-primary">
 							<th>No.</th>
