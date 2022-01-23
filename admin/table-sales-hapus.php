@@ -1,5 +1,5 @@
 <?php 
-require 'functions.php';
+// require 'functions.php';
 $IdSales = $_GET["IdSales"];
 
 if (updateSales($IdSales) > 0) {

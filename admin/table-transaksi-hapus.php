@@ -1,5 +1,5 @@
 <?php 
-require 'functions.php';
+// require 'functions.php';
 $NoFaktur = $_GET["NoFaktur"];
 
 if (hapusTransaksi($NoFaktur) > 0) {

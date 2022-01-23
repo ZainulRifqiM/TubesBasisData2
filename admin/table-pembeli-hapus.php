@@ -1,5 +1,5 @@
 <?php 
-require 'functions.php';
+// require 'functions.php';
 $IdPembeli = $_GET["IdPembeli"];
 
 if (updatePembeli($IdPembeli) > 0) {

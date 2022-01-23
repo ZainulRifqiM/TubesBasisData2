@@ -30,9 +30,9 @@ function tambahBarang($data) {
 		return false;
 	}
 
-	$query = "INSERT INTO barang
+	$query = "INSERT INTO barang (NamaBarang,Jumlah,HargaSatuan,kategori,gambar)
 			  VALUES
-			  ('','$NamaBarang','$Jumlah','$HargaSatuan','$kategori','$gambar','')
+			  ('$NamaBarang','$Jumlah','$HargaSatuan','$kategori','$gambar')
 			  ";
 	// var_dump($query);
 	// die;
@@ -159,9 +159,9 @@ function tambahSales($data) {
 	$NamaSales = htmlspecialchars($data["NamaSales"]);
 
 
-	$query = "INSERT INTO sales
+	$query = "INSERT INTO sales (NamaSales)
 			  VALUES
-			  ('','$NamaSales','')
+			  ('$NamaSales')
 			  ";
 	mysqli_query($conn, $query);
 
@@ -224,9 +224,9 @@ function tambahPembeli($data) {
 	$NamaPembeli = htmlspecialchars($data["NamaPembeli"]);
 
 
-	$query = "INSERT INTO pembeli
+	$query = "INSERT INTO pembeli (NamaPembeli)
 			  VALUES
-			  ('','$NamaPembeli','')
+			  ('$NamaPembeli')
 			  ";
 	mysqli_query($conn, $query);
 

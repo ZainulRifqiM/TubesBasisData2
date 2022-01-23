@@ -1,5 +1,5 @@
 <?php 
-require 'functions.php';
+// require 'functions.php';
 $IdPembayaran = $_GET["IdPembayaran"];
 
 if (hapusPembayaran($IdPembayaran) > 0) {
